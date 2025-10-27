@@ -1,2 +1,199 @@
 /* This is the main css file. It will provide the layout styling to the landing page as well as to the rest of pages
     Every other page to have their specific css to deal with elements that are not shared with the rest of pages */
+
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+.navbar {
+    background-color: #247AB7;
+}
+
+.brand-bar {
+    justify-self: center;
+    justify-content: center;
+    width:100%;
+    display: flex;
+}
+
+.nav-link {
+    font-family: "Zalando Sans", sans-serif !important;
+    font-weight: 300;
+    color: #fafafa;
+}
+.nav-link:hover {
+    border-bottom: 4px solid #1C4627;
+    padding-bottom: 4px;
+}
+
+.nav-item .active {
+    color: #fafafa !important;
+    font-weight: 600;
+}
+
+.insurance-types {
+    color: #fafafa;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.hero-image {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;    
+}
+.hero-image img {
+    width:50%;
+    height:100%;
+    object-fit: cover;
+}
+.hero-text-1, .hero-text-2, .hero-text-3 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.2vw;
+}
+.hero-text-1 {
+    background-color: #3C9E82;
+}
+.hero-text-2 {
+    background-color: #3C9E82;
+}
+.hero-text-3 {
+    background-color: #3C9E82;
+}
+.hero-text-header {
+    text-align: center;
+}
+.hero-text-p {
+    padding:5px;
+}
+
+.hero-image-mobile {
+    display: none;
+}
+
+footer {
+    /* height: 20vh; */
+    padding-top: 10px;
+    background-color: silver;
+}
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
+}
+footer h3 {
+    text-align: center;
+}
+footer ul {
+    padding: 0;
+}
+footer li {
+    margin-top: 5px;
+}
+
+.products-list, .products-list a{
+    list-style: none;
+    text-decoration: none;
+    color: #212529;
+}
+
+.footer-logo {
+    max-width: 100%;
+}
+.footer-socials {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-socials i{
+    margin-top: 15px;
+    font-size: 25px;
+    color: #212529;
+}
+
+.footer-bottom{
+    text-align: center;
+}
+.footer-bottom p{
+    margin: 0;
+}
+footer hr {
+    margin: 5px 5%;
+}
+
+/* Media queries for responsive design */
+
+/* Target tablets */
+@media (max-width: 768px) {
+        .hero-text-1, .hero-text-2, .hero-text-3 {
+        font-size: 2vw;
+    }
+}
+
+/* Target larger mobile phones */
+@media (max-width: 425px) {
+    .hero-image {
+        flex-direction: column;
+    }
+    /* Swap sections for mobile view only */
+    .hero-image-large {
+        display: none;
+    }
+    .hero-image-mobile {
+        display: flex;
+    }
+
+    .hero-text-1, .hero-text-2, .hero-text-3 {
+        width: 100%;
+        font-size: 3vw;
+        padding: 1%;
+    }
+    .hero-image img {
+    width: 100%;
+    height: 50%;
+    }    
+    br {
+        display:none;
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+    }
+    .footer-links-container li {
+        text-align: center;
+    }
+    .footer-logo {
+        width: 100%;
+    }
+}
+
+/* Target smallest mobile screens */
+@media (max-width:320px) {
+    .hero-text-1, .hero-text-2, .hero-text-3 {
+        font-size: 3.5vw;
+    }    
+}
+
+/* Maintain a fixed font-sixe property value in screens larger than 1440px wide */
+@media (min-width: 1440px){
+
+        .hero-text-1, .hero-text-2, .hero-text-3 {
+            font-size: 25px;
+        }
+        .nav-link {
+            font-size: 32px;
+        }
+}
+
+/* Display no content on screens smaller than 320px wide */
+@media (max-width: 319px) {
+    * {
+        display:none;
+    }    
+}
