@@ -1,18 +1,21 @@
 /* This is the main css file. It will provide the layout styling to the landing page as well as to the rest of pages
     Every other page to have their specific css to deal with elements that are not shared with the rest of pages */
 
-@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
-
+:root {
+    --green: #3c9e82;
+    --blue: #247ab7;
+}
 
 .navbar {
-    background-color: #247AB7;
+    background-color: #247ab7;
 }
 
 .brand-bar {
     justify-self: center;
     justify-content: center;
-    width:100%;
+    width: 100%;
     display: flex;
 }
 
@@ -22,7 +25,7 @@
     color: #fafafa;
 }
 .nav-link:hover {
-    border-bottom: 4px solid #3C9E82;
+    border-bottom: 4px solid #3c9e82;
     padding-bottom: 4px;
     color: #000000;
 }
@@ -37,7 +40,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.company-logo{
+.company-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -48,14 +51,16 @@
     width: 100%;
     height: 40vh;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 .hero-image img {
-    width:50%;
-    height:100%;
+    width: 50%;
+    height: 100%;
     object-fit: cover;
 }
-.hero-text-1, .hero-text-2, .hero-text-3 {
+.hero-text-1,
+.hero-text-2,
+.hero-text-3 {
     width: 50%;
     height: 100%;
     display: flex;
@@ -67,20 +72,20 @@
     font-size: 2vh;
 }
 .hero-text-1 {
-    background-color: #3C9E82;
+    background-color: #3c9e82;
 }
 .hero-text-2 {
-    background-color: #3C9E82;
+    background-color: #3c9e82;
 }
 .hero-text-3 {
-    background-color: #3C9E82;
+    background-color: #3c9e82;
 }
 .hero-text-header {
     text-align: center;
     text-decoration: underline;
 }
 .hero-text-p {
-    padding:5px;
+    padding: 5px;
 }
 
 .hero-image-mobile {
@@ -106,7 +111,8 @@ footer li {
     margin-top: 5px;
 }
 
-.products-list, .products-list a{
+.products-list,
+.products-list a {
     list-style: none;
     text-decoration: none;
     color: #212529;
@@ -119,16 +125,16 @@ footer li {
     display: flex;
     justify-content: space-around;
 }
-.footer-socials i{
+.footer-socials i {
     margin-top: 15px;
     font-size: 25px;
     color: #212529;
 }
 
-.footer-bottom{
+.footer-bottom {
     text-align: center;
 }
-.footer-bottom p{
+.footer-bottom p {
     margin: 0;
 }
 footer hr {
@@ -139,15 +145,17 @@ footer hr {
 
 /* Target tablets */
 @media (max-width: 768px) {
-        .hero-text-1, .hero-text-2, .hero-text-3 {
+    .hero-text-1,
+    .hero-text-2,
+    .hero-text-3 {
         font-size: 2vw;
     }
-        .company-logo{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 75%;
-        }    
+    .company-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
 }
 
 /* Target larger mobile phones */
@@ -163,15 +171,17 @@ footer hr {
         display: flex;
     }
 
-    .hero-text-1, .hero-text-2, .hero-text-3 {
+    .hero-text-1,
+    .hero-text-2,
+    .hero-text-3 {
         width: 100%;
         font-size: 3vw;
         padding: 1%;
     }
     .hero-image img {
-    width: 100%;
-    height: 50%;
-    }    
+        width: 100%;
+        height: 50%;
+    }
 
     .footer-links-container {
         flex-direction: column;
@@ -185,26 +195,29 @@ footer hr {
 }
 
 /* Target smallest mobile screens */
-@media (max-width:320px) {
-    .hero-text-1, .hero-text-2, .hero-text-3 {
+@media (max-width: 320px) {
+    .hero-text-1,
+    .hero-text-2,
+    .hero-text-3 {
         font-size: 3.5vw;
-    }    
+    }
 }
 
 /* Maintain a fixed font-sixe property value in screens larger than 1440px wide */
-@media (min-width: 1440px){
-
-        .hero-text-1, .hero-text-2, .hero-text-3 {
-            font-size: 25px;
-        }
-        .nav-link {
-            font-size: 32px;
-        }
+@media (min-width: 1440px) {
+    .hero-text-1,
+    .hero-text-2,
+    .hero-text-3 {
+        font-size: 25px;
+    }
+    .nav-link {
+        font-size: 32px;
+    }
 }
 
 /* Display no content on screens smaller than 320px wide */
 @media (max-width: 319px) {
     * {
-        display:none;
-    }    
+        display: none;
+    }
 }
