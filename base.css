@@ -31,7 +31,7 @@ body {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 125px;
+    height: 100px;
     background-color: var(--green);
 }
 .nav-wrapper {
@@ -287,4 +287,12 @@ footer hr {
     .nav-link {
         /* font-size: 26px; */
     }
+}
+
+/* Fixed */
+@media (max-width: 768px) {
+    .footer-links-container {
+    display: grid;
+    text-align: center;
+}
 }
