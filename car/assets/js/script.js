@@ -1,4 +1,4 @@
-// Validations -------------------------------------------------------------------------
+// VALIDATIONS SECTION -------------------------------------------------------------------------
 //Reg validation -- WARN No spaces
 const regInput = document.getElementById("inputReg");
 const warning = document.getElementById("regWarning");
@@ -12,22 +12,19 @@ regInput.addEventListener("input", () => {
 });
 
 
-
-
-
-
 // VALUE VALIDATION - PREVENT 200,000 plus car value 
 const carValueInput = document.getElementById("carValue");
 
 carValueInput.addEventListener("input", function () {
     let value = parseFloat(this.value) || 0;
     if (value > 200000) {
-        this.value = 200000;  // automatically clamp
+        this.value = 200000;  // automatically clamp, limit
     }
 });
+// END OF VALIDATIONS ------------------------------------------------------
 
-// DOM MANIPULATION -----------------------------------------------------------------------
 
+// DOM MANIPULATION SECTION-----------------------------------------------------------------------
 // REG PLATE
 const input = document.getElementById("inputReg");
 const mirror = document.getElementById("regCopy");
@@ -114,8 +111,9 @@ $(document).ready(function () {
         $("#tcOverlay").fadeOut(750);
     });
 });
+// END OF DOM MANIPULATIONS-------------------------------------------------------------
 
-// CALCULATIONS ---------------------------------------------------------------------------
+// CALCULATIONS SECTION ---------------------------------------------------------------------------
 // Vehicle Information Section
 
 function calculatePremium() {
