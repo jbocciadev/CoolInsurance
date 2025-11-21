@@ -148,3 +148,6 @@ input[type=checkbox]:focus {
 .shadowOnFocus:focus, .shadowOnFocus:has(input:focus) {
     box-shadow: 0 0 10px var(--green);
 }
+.reqd-asterisk {
+    color: var(--green);
+}

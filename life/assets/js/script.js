@@ -78,3 +78,11 @@ function triggerToast(toastType, toastText) {
     Toastify(toastParameters).showToast();
 }
 
+// *** Handle form validation ***
+
+// 1 get submit button and prevent default behaviour
+// 2 implement validation on the form
+
+// TO DO
+// 1 implement emailjs
+// 2 add form fields to the email to be sent
