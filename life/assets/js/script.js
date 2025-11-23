@@ -76,9 +76,7 @@ document.getElementById("lifeForm").addEventListener("submit", function(event){
 
         // Add second adult if second adult form fields are visible
         if (secondAdultDiv.classList.contains("d-none") == false){
-            console.log("second adult test ok");
             var secondAdult = {};
-            console.log("second adult created");
             secondAdult.name = lifeForm.querySelector("#fname2").value.trim();
             secondAdult.surname = lifeForm.querySelector("#lname2").value.trim();
             secondAdult.cover = document.getElementById("cover-amount-2").value;
@@ -86,11 +84,8 @@ document.getElementById("lifeForm").addEventListener("submit", function(event){
             secondAdult.dob = document.getElementById("dob-2").value;        
             secondAdult.age = new Date().getFullYear() - new Date(document.getElementById("dob-2").value).getFullYear(); // calculate age - only current year - birth year
             secondAdult.smoker = document.getElementById("smoker-yes2").checked ? "Yes" : "No";
-            // console.table(secondAdult);
-            console.log(calculatePremium(secondAdult));
             totalPremium += parseFloat(calculatePremium(secondAdult));
         }
-        console.table(secondAdult);
         // Capture details and send email
         let quoteDetails = {};
         quoteDetails.firstAdult = firstAdult;
@@ -112,9 +107,6 @@ document.getElementById("lifeForm").addEventListener("submit", function(event){
     
 });
 
-// TO DO
-// 1 implement emailjs
-// 2 add form fields to the email to be sent
 
 // VALIDATE FORM FIELDS----------------------------
 function validateForm(lifeForm){
@@ -213,7 +205,6 @@ function validateForm(lifeForm){
             }
         }
     }
-    console.log("from inside validateForm()")
     return true;
 };
 
@@ -280,7 +271,6 @@ function sendEmail(quoteDetails) {
         ${quoteDetails.eircode}, ${quoteDetails.city} ${quoteDetails.county}
         Contact telephone number: ${quoteDetails.phone}`;
 
-    console.table(emailData);
     emailjs.send(serviceID, templateID, emailData)
         .then(() => {
                 triggerToast("info", "Your quotation was emailed to " + emailData.email);
