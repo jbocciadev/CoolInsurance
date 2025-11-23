@@ -80,13 +80,12 @@ label {
 }
 
 /* Collapsed Form Edit Buttons */
-.collapsed {
-width:600px;
+.editDropdown {
 justify-self: center;
 text-align: center;
 }
 /* Nice affect on the above */
-.collapsed:hover {
+.editDropdown:hover {
 font-weight: bold;
 }
 
