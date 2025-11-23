@@ -1,14 +1,14 @@
 // Display/remove second Adult form
 // get elements
 let addAdultBtn = document.getElementById("add-adult-btn");
-let secondAdult = document.getElementById("secondAdultDiv");
+let secondAdultDiv = document.getElementById("secondAdultDiv");
 let removeAdultBtn = document.getElementById("remove-adult-btn");
-let secondAdultInputs = secondAdult.querySelectorAll("input") // https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll
+let secondAdultInputs = secondAdultDiv.querySelectorAll("input") // https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll
 
 // Add event listeners
 addAdultBtn.addEventListener("click", function(){
     // Display second adult form
-    secondAdult.classList.remove("d-none");
+    secondAdultDiv.classList.remove("d-none");
     // Enable fields in second adult section
     for (input of secondAdultInputs){
         input.disabled = false;
@@ -43,7 +43,7 @@ removeAdultBtn.addEventListener("click", function() {
         }
     }
     // Hide second adult form
-    secondAdult.classList.add("d-none")
+    secondAdultDiv.classList.add("d-none")
     // Swap add second adult button for remove second adult button
     addAdultBtn.classList.remove("d-none");
     removeAdultBtn.classList.add("d-none");
@@ -56,8 +56,7 @@ removeAdultBtn.addEventListener("click", function() {
 
 
 // *** Handle form submission ***
-// 1 get submit button
-document.getElementById("submit-form-btn").addEventListener("click", function(event){
+document.getElementById("lifeForm").addEventListener("submit", function(event){
     // 2 implement validation on the form
     event.preventDefault(); // Stop the form from sending information to its target
     let lifeForm = document.getElementById("lifeForm");
@@ -65,27 +64,50 @@ document.getElementById("submit-form-btn").addEventListener("click", function(ev
 
         // create firstAdult object with cover amount, cover term, age and smoker attributes
         let firstAdult = {};
+        firstAdult.name = lifeForm.querySelector("#fname1").value.trim();
+        firstAdult.surname = lifeForm.querySelector("#lname1").value.trim();
         firstAdult.cover = document.getElementById("cover-amount-1").value;
-        firstAdult.term = document.getElementById("cover-term-1").value;        
+        firstAdult.term = document.getElementById("cover-term-1").value;
+        firstAdult.dob = document.getElementById("dob-1").value;        
         firstAdult.age = new Date().getFullYear() - new Date(document.getElementById("dob-1").value).getFullYear(); // calculate age - only current year - birth year
-        firstAdult.smoker = document.getElementById("smoker-yes1").checked;
+        firstAdult.smoker = document.getElementById("smoker-yes1").checked ? "Yes" : "No";
 
-        let firstAdultPremium, secondAdultPremium = [0,0];
-        firstAdultPremium = calculatePremium(firstAdult);
+        let totalPremium = parseFloat(calculatePremium(firstAdult));
 
         // Add second adult if second adult form fields are visible
-        let secondAdult = document.getElementById("secondAdultDiv");       
-        if (!secondAdult.classList.contains("d-none")){
-        let secondAdult = {};
-        secondAdult.cover = document.getElementById("cover-amount-2").value;
-        secondAdult.term = document.getElementById("cover-term-1").value; // Term is same for both        
-        secondAdult.age = new Date().getFullYear() - new Date(document.getElementById("dob-2").value).getFullYear(); // calculate age - only current year - birth year
-        secondAdult.smoker = document.getElementById("smoker-yes2").checked;
-        secondAdultPremium = calculatePremium(secondAdult);
+        if (secondAdultDiv.classList.contains("d-none") == false){
+            console.log("second adult test ok");
+            var secondAdult = {};
+            console.log("second adult created");
+            secondAdult.name = lifeForm.querySelector("#fname2").value.trim();
+            secondAdult.surname = lifeForm.querySelector("#lname2").value.trim();
+            secondAdult.cover = document.getElementById("cover-amount-2").value;
+            secondAdult.term = firstAdult.term;
+            secondAdult.dob = document.getElementById("dob-2").value;        
+            secondAdult.age = new Date().getFullYear() - new Date(document.getElementById("dob-2").value).getFullYear(); // calculate age - only current year - birth year
+            secondAdult.smoker = document.getElementById("smoker-yes2").checked ? "Yes" : "No";
+            // console.table(secondAdult);
+            console.log(calculatePremium(secondAdult));
+            totalPremium += parseFloat(calculatePremium(secondAdult));
         }
-        let totalPremium = firstAdultPremium + secondAdultPremium;
-        
+        console.table(secondAdult);
+        // Capture details and send email
+        let quoteDetails = {};
+        quoteDetails.firstAdult = firstAdult;
+        if (secondAdultDiv.classList.contains("d-none") == false) {
+            quoteDetails.secondAdult = secondAdult;
+        }
+        quoteDetails.totalPremium = totalPremium;
+        quoteDetails.address = lifeForm.querySelector("#address").value;
+        quoteDetails.address2 = lifeForm.querySelector("#address2").value.trim()
+        quoteDetails.eircode = lifeForm.querySelector("#eircode").value;
+        quoteDetails.city = lifeForm.querySelector("#city").value.trim()
+        quoteDetails.county = lifeForm.querySelector("#county").value;
+        quoteDetails.phone = lifeForm.querySelector("#phone").value;
+        document.getElementById("submit-form-btn").disabled = true;
+        sendEmail(quoteDetails); 
     }
+
     
     
 });
@@ -196,6 +218,7 @@ function validateForm(lifeForm){
 };
 
 // CALCULATE MONTHLY PREMIUM -----------------------------
+
 function calculatePremium(adult){
     // Premium will be calculated in thirds, age, term and smoker (multiplier). 
     // Max premium will be calculated as a percentage of €1000 for cover under €250,000, or total amount if cover is larger.
@@ -223,6 +246,51 @@ function calculatePremium(adult){
     monthlyPremium = maxPremium * premiumMultiplier;
     
     return monthlyPremium;
+};
+
+function sendEmail(quoteDetails) {
+    emailjs.init("X0VrOze2ucHH5azPw");
+    // emailJS generic template and service id
+    const serviceID = "service_t7m9ufn";
+    const templateID = "template_nxmytjl";
+
+    const emailData = {};
+    emailData.email = document.getElementById("email").value.trim();
+    emailData.name = quoteDetails.firstAdult.name;
+    emailData.monthly_total = new Intl.NumberFormat("en-IE",{minimumFractionDigits:2, maximumFractionDigits:2}).format(quoteDetails.totalPremium);
+    emailData.annual_total = new Intl.NumberFormat("en-IE",{minimumFractionDigits:2, maximumFractionDigits:2}).format(parseFloat(emailData.monthly_total) * 12);
+    emailData.cover_info = `Cover term: ${quoteDetails.firstAdult.term} Years
+        First Adult: ${quoteDetails.firstAdult.name} ${quoteDetails.firstAdult.surname}
+        Cover amount: € ${new Intl.NumberFormat("en-IE",{minimumFractionDigits:2, maximumFractionDigits:2}).format(quoteDetails.firstAdult.cover)}        
+        Smoker: ${quoteDetails.firstAdult.smoker}
+        Date of Birth: ${quoteDetails.firstAdult.dob}`;
+
+    if (quoteDetails.secondAdult) {
+        emailData.cover_info += `
+            ---
+            Second Adult: ${quoteDetails.secondAdult.name} ${quoteDetails.secondAdult.surname}
+            Cover amount: € ${new Intl.NumberFormat("en-IE",{minimumFractionDigits:2, maximumFractionDigits:2}).format(quoteDetails.secondAdult.cover)}        
+            Smoker: ${quoteDetails.secondAdult.smoker}
+            Date of Birth: ${quoteDetails.secondAdult.dob}`;
+    }
+    // Add contact details
+    emailData.cover_info += `
+        ---
+        Address: ${quoteDetails.address} ${quoteDetails.address2}
+        ${quoteDetails.eircode}, ${quoteDetails.city} ${quoteDetails.county}
+        Contact telephone number: ${quoteDetails.phone}`;
+
+    console.table(emailData);
+    emailjs.send(serviceID, templateID, emailData)
+        .then(() => {
+                triggerToast("info", "Your quotation was emailed to " + emailData.email);
+                // document.getElementById("emailQuote").textContent =
+                //     "Quotation has been successfully sent to your email!"; // prevent user from sending same email again, transform button
+            })
+            .catch((error) => {
+                console.error("Error sending quotation:", error);
+                alert("Error sending email");
+            });
 
 }
 
@@ -249,16 +317,9 @@ function triggerToast(toastType, toastText) {
             };
         }
     Toastify(toastParameters).showToast();
-}
-
-
-
+};
 
 // 0 Calculate premium
-    // let multiplier = 0;
-    // let maxPremium = 500;
-    // vars for calculation
-    // let 
     // 1 capture relevant fields
     // Name, email, 
     // 2 send email
