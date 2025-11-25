@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get fast and accurate car insurance quotes with Cool Insurance. Compare policy options, calculate premiums, and submit your details securely online.">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -93,9 +94,11 @@
                         received all your details.</li>
                     <li>Once you complete a section please click the proceed button to continue.</li>
                     <li>If you make a mistake please refer to the edit buttons to amend them</li>
-                    <li>Car age is determined through your vehicle's licence plate.</li>
-                    <li>If you have any questions please feel free to contact us or read through the <a
-                            href="../index.html#FAQs">FAQs</a></li>
+                    <li>You are obligated to ensure that the information you provide is accurate and truthful.</li>
+                    <li>If you have any questions please feel free to contact us or read through the
+                        <a href="../index.html#FAQs">FAQs</a>
+                    </li>
+                    <li>If you have any other queries please contact us directly <a href="../index.html#map-wrapper">here.</a></li>
                 </ul>
                 <h6>Please make sure you are familiar with the terms and conditions before agreeing to them.</h6>
                 <a href="#tc-overlay" onclick="openTC()" id="openTC">Terms and Conditions</a>
@@ -188,10 +191,10 @@
                         <label for="fuelType" class="form-label">Fuel Type</label>
                         <select class="form-select" id="fuelType" required>
                             <option value="">Select Fuel Type</option>
-                            <option>Petrol</option>
-                            <option>Diesel</option>
-                            <option>Hybrid</option>
-                            <option>Electric</option>
+                            <option value="0">Petrol</option>
+                            <option value="1">Diesel</option>
+                            <option value="2">Hybrid</option>
+                            <option value="3">Electric</option>
                         </select>
 
                     </div>
@@ -199,7 +202,7 @@
                     <!-- ENGINE CAPACITY -->
                     <div class="form-group col-md-6">
                         <label for="engineSize" class="form-label">Enter Engine Size (cc)</label>
-                        <input type="number" id="engineSize" class="form-control" placeholder="Example: '999', '1249'"
+                        <input type="number" id="engineSize" class="form-control" placeholder="eg. 1200, 2000" min="0"
                             required>
                     </div>
 
@@ -214,7 +217,7 @@
                     <!-- Estimated Mileage -->
                     <div class="form-group col-md-4">
                         <label for="mileage" class="form-label">Estimated Mileage</label>
-                        <input type="number" id="mileage" class="form-control" placeholder="(km)" required>
+                        <input type="number" id="mileage" class="form-control" placeholder="(km)" min="0" required>
                     </div>
                     <!-- Parking Location -->
                     <div class="form-group col-md-4">
@@ -271,7 +274,7 @@
                     </div>
                     <!-- POLICY START -->
                     <div class="policy form-group col-lg-5 p-3 mb-3">
-                        <h4>2. Please select policy START date</h4>
+                        <label for="policyStart" class="mb-1">Policy Start Date</label><br>
                         <input type="date" class="mb-1" id="policyStart" name="policyStart" required><br>
                         <p">Cannot be back-dated*</p>
                     </div>
@@ -402,7 +405,7 @@
 
                     <div class="form-group col-md-4">
                         <label for="inputZip" class="form-label">Enter Post Code</label>
-                        <input type="text" class="form-control" id="inputZip" placeholder="DXX XXXX" required>
+                        <input type="text" class="form-control" id="inputZip" required>
                     </div>
                 </div>
 
@@ -494,7 +497,8 @@
 
             <div>
                 <div>
-                    <a href="../index.html"><img class="footer-logo" src="../assets/images/Cool_logo.png" alt="Company Logo" /></a>
+                    <a href="../index.html"><img class="footer-logo" src="../assets/images/Cool_logo.png"
+                            alt="Company Logo" /></a>
                 </div>
                 <div class="footer-socials">
                     <div>

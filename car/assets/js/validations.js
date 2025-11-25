@@ -4,7 +4,7 @@ document.getElementById('inputReg').addEventListener('input', function () {
     const reg = this.value;
     const warning = document.getElementById('regWarning');
 
-    // Logical check for Reg input (REGEX)
+    // Logical check for Reg input (REGEX) - source https://www.w3schools.com/js/js_regexp.asp
     const pattern = /^\d{2,3}-[A-Za-z]{1,2}-\d+$/; // 2 or 3 digits for year, one or two letters for County code, and dashes
     // warning if conditions are and arent met
     if (!pattern.test(reg)) {
@@ -14,6 +14,21 @@ document.getElementById('inputReg').addEventListener('input', function () {
         warning.style.display = "none";
     }
 });
+
+// Hide Engine Size section for electric source: 
+document.getElementById('fuelType').addEventListener('change', function () {
+    const engineField = document.getElementById('engineSize').closest('.form-group');
+    // target option 3 (electric)
+    if (this.value === '3') {
+        engineField.style.display = 'none';
+        document.getElementById('engineSize').required = false;
+    } else {
+        engineField.style.display = 'block';
+        document.getElementById('engineSize').required = true;
+    }
+});
+
+
 
 // PolicyStart dynamic VALIDATION. So users cant backdate policy - Source: https://www.w3schools.com/jsref/jsref_toisostring.asp , https://stackoverflow.com/questions/47066555/remove-time-after-converting-date-toisostring
 // Get today date in YYYY-MM-DD format
