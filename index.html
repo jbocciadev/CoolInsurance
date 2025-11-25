@@ -77,7 +77,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <hr>
-                <ul class="navbar-nav ms-auto align-items-center">
+                <!--  -->
+                <ul class="navbar-nav ms-auto align-items-center d-none d-sm-flex">
                     <li class="nav-item">
                         <a class="nav-link" href="./home/home.html"><i class="fa-solid fa-house"></i>Home</a>
                     </li>
@@ -87,6 +88,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./car/car.html"><i class="fa-solid fa-car"></i>Car</a>
                     </li>
+                </ul>
+
+                <!--  -->
+                <ul class="navbar-nav ms-auto align-items-center d-sm-none">
+                    <div>
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="./home/home.html">Home</a><i class="fa-solid fa-house text-center"></i>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="./life/life.html">Life</a><i class="fa-solid fa-person text-center"></i>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="./car/car.html">Car</a><i class="fa-solid fa-car text-center"></i>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -358,43 +374,47 @@
     </section>
     <!-- END OF FAQ ------------------------------------------------------------- -->
 
-    <section class="landing-section d-flex justify-content-center">
+    <section class="landing-section d-flex justify-content-center" id="contact-section">
         <div class="hero-card d-none d-sm-block col-md-10 col-lg-8">
             <div class="row d-flex justify-content-center">
                 <div class="contact-us">
-                <h1 class="text-center">Contact us <i class="fa-solid fa-envelope-open-text"></i></h1>
-                <hr>
-            </div>
-            <div class="row">
-                <div class="w-50">
-                    <div class="m-4" id="map-wrapper">
-                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6613214231406!2d-6.245943923032343!3d53.349318574500714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8ce998744b%3A0x122434bd6251cc7c!2sMayor%20Street%20Lower%2C%20North%20Wall%2C%20Dublin!5e0!3m2!1sen!2sie!4v1763923979113!5m2!1sen!2sie" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <h1 class="text-center">Contact us <i class="fa-solid fa-envelope-open-text"></i></h1>
+                    <hr>
                 </div>
-                <div class="w-50 px-5 d-flex flex-column align-items-center justify-content-between">
-                    <div class="container m-4 px-5 py-2 h-100" id="form-wrapper">
-                        <form action="" id="contact-form" class="d-flex flex-column justify-content-around">
-                            <div class="row">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" class="contact-input" placeholder="Your name" required>
-                            </div>
-                            <div class="row">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="contact-input" placeholder="Your email" required>
-                            </div>
-                            <div class="row">
-                                <label for="email">Your message to us</label>
-                                <textarea name="message" id="message" class="contact-input" wrap="hard" rows="8" placeholder="Your message..."></textarea>
-                            </div>
-                            <!-- <div class="d-inline" class="w-50" id="submit-btn-wrapper"> -->
+                <div class="row">
+                    <div class="w-50">
+                        <div class="m-4" id="map-wrapper">
+                            <iframe id="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6613214231406!2d-6.245943923032343!3d53.349318574500714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8ce998744b%3A0x122434bd6251cc7c!2sMayor%20Street%20Lower%2C%20North%20Wall%2C%20Dublin!5e0!3m2!1sen!2sie!4v1763923979113!5m2!1sen!2sie"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="w-50 px-5 d-flex flex-column align-items-center justify-content-between">
+                        <div class="container m-4 px-5 py-2 h-100" id="form-wrapper">
+                            <form action="" id="contact-form" class="d-flex flex-column justify-content-around">
+                                <div class="row">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="contact-input" placeholder="Your name" required>
+                                </div>
+                                <div class="row">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" class="contact-input" placeholder="Your email"
+                                        required>
+                                </div>
+                                <div class="row">
+                                    <label for="email">Your message to us</label>
+                                    <textarea name="message" id="message" class="contact-input" wrap="hard" rows="8"
+                                        placeholder="Your message..."></textarea>
+                                </div>
+                                <!-- <div class="d-inline" class="w-50" id="submit-btn-wrapper"> -->
                                 <input type="submit" name="submit-btn" id="submit-btn" class="w-50 align-self-center">
-                            <!-- </div> -->
-                        </form>
+                                <!-- </div> -->
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
-            
+
         </div>
         <!-- Card for smallest screen sizes -->
         <div class="hero-card d-sm-none d-block">
@@ -420,6 +440,95 @@
         </div>
     </section>
 
+    <section class="landing-section-2 d-flex justify-content-center" id="about">
+
+        <div> <!-- Full width container for the form -->
+            <div class="faqMain mx-auto text-start" id="AboutUsSection"> <!-- Edited CSS to center the form -->
+                <h1 class="faqHeading">About Us</h1>
+                <h2 class="text-center">Pioneering Insurance Online Since 2025</h2>
+                <ul>
+                    <li class="aboutPoints">
+                        <h5> Our Story </h5>
+                        Cool Insurance.ie launched in 2025 offering insurance online.
+                        We've grown to become one of the leading Irish insurance providers offering Car, Home, and
+                        Health Insurance.
+                    </li>
+
+                    <li class="aboutPoints">
+                        <h5>Living Our Values</h5>
+                        Integrity, Respect, Customer-driven, Excellence, and Generosity are the core values we live by.
+                        Our mission is to help individuals, businesses, and society thrive—both in prosperous times and
+                        in challenging ones.
+                    </li>
+
+                    <li class="aboutPoints">
+                        <h5>Our Customer commitment - Putting you first</h5>
+                        We are dedicated to delivering great service and ensuring you have a positive experience.
+                        We value your feedback, which is why our reviews come from independent sources.
+                        We are proud to have received the Platinum Trusted Service Award from Feefo for three years in a
+                        row,
+                        reflecting our commitment to meeting your needs. Your voice matters to us,
+                        and we are here to listen and improve. <br>
+                    </li>
+                    <li class="aboutPoints">
+                        <h5>Get in Touch</h5>
+                        If you have any questions please feel free to contact us on the number below or
+                        drop us an email or read through the FAQs
+                    </li>
+                </ul>
+                <br>
+                <hr>
+
+
+
+
+
+                <h1 class="text-center">Customer Testimonials</h1><br>
+                <h2 class="text-center"> Don't Just Take Our Word For It!</h2>
+                <p class="text-center">See what our customers have to say about us:</p>
+
+                <div class="d-flex flex-column">
+                    <div class="card mx-auto mb-3 w-75">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">"Cool Insurance made it so easy to get my car insured. The online
+                                process was quick and
+                                hassle-free!" - Padraig N.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mx-auto mb-3 w-75">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1614204424926-196a80bf0be8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">"I saved a lot on my home insurance with Cool Insurance. Their
+                                customer
+                                service is top-notch!" - Caoimhe L.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card mx-auto mb-3  w-75">
+                        <img class="card-img-top"
+                            src="https://images.unsplash.com/photo-1522556189639-b150ed9c4330?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">"I highly recommend Cool Insurance for their excellent coverage
+                                options and
+                                affordable rates." - Eoghan D.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+
     <footer>
         <hr>
         <div class="footer-links-container mt-3">
@@ -434,11 +543,14 @@
             <div>
                 <h3>Cool Insurance</h3>
                 <ul class="products-list">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#FAQs">FAQs</a></li>
+                    <li><a href="../index.html#about">About us</a></li>
+                    <li><a href="../index.html#contact-section">Contact</a></li>
+                    <li><a href="../index.html#FAQs">FAQs</a></li>
                 </ul>
             </div>
+
+
+
 
 
             <div>

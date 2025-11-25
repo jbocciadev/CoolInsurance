@@ -170,7 +170,7 @@ function calculatePremium() {
     if (policy) {
         total += rates[policy];
     }
-    let baseline = 150
+    let baseline = 250
     total += baseline;
 
 

@@ -141,6 +141,12 @@ footer hr {
     margin: 5px 5%;
 }
 
+#contact-section,
+#about,
+#FAQs {
+    scroll-margin-top: 150px;
+}
+
 /* Media queries for responsive design */
 
 /* Target tablets */
@@ -199,13 +205,13 @@ footer hr {
 /* REVISED NAVBAR --------------------------------------------------------------------- */
 /* ICONS */
 .navbar i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #3c9e82;
     text-align: center;
 }
 
 .navbar a {
-    font-size: 30px;
+    font-size: 22px;
     color: #212529;
     font-weight: 600;
     display: grid;
@@ -279,10 +285,32 @@ li.nav-item {
     }
 }
 
+@media (max-width: 576px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: end !important;
+    }
+
+    .nav-link {
+        text-align: left;
+        width: 70px;
+    }
+    .fa-person {
+        padding-right: 6px;
+    }
+
+    .fa-car {
+        padding-right: 2px;
+    }
+}
+
 @media (max-width: 460px) {
     .navbar-nav {
         flex-direction: column;
+        align-items: end !important;
     }
+
+
 
     #cool_logo {
         width: 200px;

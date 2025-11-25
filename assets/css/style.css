@@ -4,7 +4,6 @@ h1 {
     font-weight: 600;
 }
 
-
 .landing-section {
     background-color: var(--green);
 }
@@ -161,6 +160,7 @@ h1 {
     width: 80%;
     color: var(--white);
     margin-top: 5px;
+
 }
 
 .panel {
@@ -169,6 +169,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
     justify-items: center;
+    height: auto;
 }
 
 /* Hidden Edit Butoons from get go ------------------------------------------ */
@@ -198,29 +199,86 @@ h1 {
 
 #map {
     width: 100%;
-    aspect-ratio: 4 / 4 ;
+    aspect-ratio: 4 / 4;
     border-radius: 10px;
     margin: 0;
     box-shadow: 0 0 10px var(--green);
     object-fit: cover;
 }
+
 #form-wrapper {
     border-radius: 10px;
     box-shadow: 0 0 10px var(--green);
 }
+
 #contact-form {
     width: 100%;
     height: 100%;
 }
+
 .contact-input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     width: 100%;
 }
+
 /* #submit-btn-wrapper {
     justify-self: center !important;
 } */
+
+/* This is the about us page css for our cool insurance site 
+ Joanne Brennan Elliott JBE */
+
+.aboutPoints {
+    list-style-type: none;
+    margin-bottom: 18px;
+}
+
+.card-img-top {
+    width: fit-content;
+    height: 250px;
+    align-self: center;
+    border-radius: 30px !important;
+    margin-top: 16px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+    background-color: offwhite;
+    margin: 0 auto;
+    /* centers it */
+    padding: 10px;
+
+}
+
+
+.aboutus-form {
+    background-color: #3C9E82;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px black;
+
+}
+
+.aboutus-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutus-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*  */
 
 @media (max-width: 768px) {
 
@@ -243,16 +301,19 @@ h1 {
         width: 80vw;
         padding: 14px;
     }
+
     .faq-toggle {
         width: 99%;
         border-radius: 15px;
 
     }
+
     .accordion {
         width: 95%;
         border-radius: 15px;
         padding: 8px 8px 0px 8px;
     }
+
     .accordion:after {
         float: inline-end;
         margin-right: 9px;
