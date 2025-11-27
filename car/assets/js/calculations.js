@@ -105,7 +105,7 @@ function calculatePremium() {
 
     // Driver Experience Calculations (DRIVER DETAILS SECTION)----------------------------------------------
 
-    const experience = Math.max(0, parseInt(document.getElementById("experience").value || 0)); //parse values and make sure cant be minuses
+    const experience = Math.max(0, parseInt(document.getElementById("experience").value || 0)); //parse values+make sure cant be minuses
     let experienceMultiplier = 0; // default (no increase)
 
     if (experience === 0) experienceMultiplier = -0.05;
@@ -119,7 +119,7 @@ function calculatePremium() {
     total += total * experienceMultiplier;
 
     // No Claim Bonus
-    const ncb = parseInt(document.getElementById("noClaims").value || 0); // parse int the ncb amount // || 0 to avoid NaN errors
+    const ncb = parseInt(document.getElementById("noClaims").value || 0); // parse int the ncb amount || 0 to avoid NaN errors, math.max not need for dropdown
     let ncbMultiplier = 0;
     if (ncb === 0) ncbMultiplier = 0;
     else if (ncb === 1) ncbMultiplier = -0.1;
@@ -160,7 +160,7 @@ function calculatePremium() {
     });
 
     // Policy Type
-    // User Required to pick one of them by HTML validation
+    // User Required to pick one of them by HTML validation, const - never change the values
     const rates = {
         comprehensive: 300,
         fireTheft: 250,
@@ -170,7 +170,7 @@ function calculatePremium() {
     if (policy) {
         total += rates[policy];
     }
-    let baseline = 250
+    const baseline = 250 // never change
     total += baseline;
 
 
@@ -181,7 +181,7 @@ function calculatePremium() {
     document.getElementById("premiumOutput").textContent = total.toFixed(2);
     document.getElementById("monthlyPremiumOutput").textContent = monthlyTotal.toFixed(2);
 
-    // RETURN the totals variables for the EmailJS below
+    // RETURN the totals global variables for the EmailJS below
     return { total, monthlyTotal };
 }
 
