@@ -29,11 +29,6 @@ function mySubmit() {
 		return;
 		}
 	
-		if (!userEmail.includes("@") || !userEmail.includes(".")) {
-			alert("Please enter a valid email address.");
-			return;
-		} 
-		
 		// <!--  - Validate phone number  -->
 		let phoneNumber = document.getElementById("phoneNumber").value.trim();    
 		document.getElementById("phoneNumber").innerHTML =  phoneNumber;   
@@ -46,7 +41,12 @@ function mySubmit() {
 			alert("Please enter a valid moblie phone number with 10 digits.");
 		return;
 		}	
-
+	
+		if (!userEmail.includes("@") || !userEmail.includes(".")) {
+			alert("Please enter a valid email address.");
+			return;
+		} 
+		
 		//Start date validation 
 		let startDate = document.getElementById("startDate").value;   
 		document.getElementById("startDate").innerHTML =  startDate;
@@ -61,13 +61,34 @@ function mySubmit() {
 		return;
 		}
 
+		//valiate build year cannot be in the future
+		let buildYear = document.getElementById("buildYear").value.trim();
+		let currentYear = new Date().getFullYear();
+		if (Number(buildYear) > currentYear) {
+			alert("Build year cannot be in the future. Please adjust the value.");
+		return;
+		}	
+		
+		//number of bedrooms cannot be less than 1
+		let numberOfBedrooms = document.getElementById("bedrooms").value.trim();
+		if (Number(numberOfBedrooms) < 1) {
+			alert("Number of bedrooms must be at least 1. Please adjust the value.");
+		return;
+		}	
+		//number of bathrooms cannot be less than 1
+		let numberOfBathrooms = document.getElementById("bathrooms").value.trim();
+		if (Number(numberOfBathrooms) < 1) {
+			alert("Number of bathrooms must be at least 1. Please adjust the value.");
+		return;
+		}	
+
 		//validation for rebuild and contents  
 		let rebuildCost = document.getElementById("rebuildCost").value.trim();
 		if (document.getElementById("rebuildCost").value === "" || isNaN(document.getElementById("rebuildCost").value)) {
 			alert("Please enter a valid rebuild value in numbers only.");
 		return;
 		}
-
+	
 		let contentsValue = document.getElementById("contentsValue").value.trim();
 		if (document.getElementById("contentsValue").value === "" || isNaN(document.getElementById("contentsValue").value)) {
 			alert("Please enter a valid contents value in numbers only.");
@@ -79,37 +100,11 @@ function mySubmit() {
 			alert("Contents value cannot exceed or equal rebuild value. Please adjust the values.");
 		return;
 		}	
-		//add more validations as needed - eg rebuild and contents - certain % etc
-		//
-		//
-		//
-		//
-
-		//valiate build year cannot be in the future
-		let buildYear = document.getElementById("buildYear").value.trim();
-		let currentYear = new Date().getFullYear();
-		if (Number(buildYear) > currentYear) {
-			alert("Build year cannot be in the future. Please adjust the value.");
-		return;
-		}	
 		
 		//number of floors cannot be less than 1
 		let numberOfFloors = document.getElementById("numOfFloors").value.trim();
 		if (Number(numberOfFloors) < 1) {
 			alert("Number of floors must be at least 1. Please adjust the value.");
-		return;
-		}	
-
-		//number of bedrooms cannot be less than 1
-		let numberOfBedrooms = document.getElementById("bedrooms").value.trim();
-		if (Number(numberOfBedrooms) < 1) {
-			alert("Number of bedrooms must be at least 1. Please adjust the value.");
-		return;
-		}	
-		//number of bathrooms cannot be less than 1
-		let numberOfBathrooms = document.getElementById("bathrooms").value.trim();
-		if (Number(numberOfBathrooms) < 1) {
-			alert("Number of bathrooms must be at least 1. Please adjust the value.");
 		return;
 		}	
 

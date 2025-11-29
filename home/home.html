@@ -95,13 +95,13 @@
                     <div class="row"> <!-- phone number and cover start date row -->
                         <div class="col-sm-6">
                              <label for="phoneNumber">Phone Number</label> <!-- TO DO   - Validate phone number  -->
-                             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phone number">  
+                             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phone number" pattern="[0-9]{10}" required >  
                         </div>  
 
                         <div class="col-sm-6"> 
                         <!-- date you require the home insurance from? -->
                             <label for="startDate">Cover Start Date</label>
-                            <input type="date" id="startDate" name="startDate">
+                            <input type="date" id="startDate" name="startDate" required>
                         </div>
                     </div>
 
@@ -109,13 +109,13 @@
                     <div class="col-lg-12 show">	<!-- Full width column -->
                         <label for="eircode">Address or Eircode of Property to be insured</label> 
                          <!--TO DO validate eircode format here-->            
-                        <input type="text" id="ecode" name="eircode" placeholder="Your Eircode or Address">
+                        <input type="text" id="ecode" name="eircode" placeholder="Your Eircode or Address" required>
                     </div>
 
                     <div class="col-lg-12 show">	<!-- Full width column -->
                     <label for="email  ">Please supply your Email Address for your Quote</label>
                    <!--  <input type="email" id="email" name="email" placeholder="email"> -->
-                     <input type="email" id="email" name="email" placeholder="email">
+                     <input type="email" id="email" name="email" placeholder="email" required>
                      
                 </div>
 
@@ -138,7 +138,7 @@
                         <div class="col-sm-6"> 
                             <!-- when was your home built?  --> 
                             <label for="buildYear">Build Year</label>
-                            <input type="number" id="buildYear" name="buildYear" placeholder="e.g., 1990">
+                            <input type="number" id="buildYear" name="buildYear" placeholder="e.g., 1990" required>
                         </div>   
                     </div>  
 
@@ -147,13 +147,13 @@
                             <!--  how many Bedrooms?  --> 
                             <!-- validate number Bedrooms format here-->  
                             <label for="numOfBedrooms">How many bedrooms?</label> 
-                            <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3" min="1">
+                            <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3" min="1" required>
                         </div>
 
                          <div class="col-sm-6"> 
                         <!--  how many bathrooms?  --> 
                         <label for="numOfBathrooms">How many bathrooms?</label>
-                        <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g., 2" min="1">
+                        <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g., 2" min="1" required>
                         </div>
                     </div>
 
@@ -285,9 +285,11 @@
                 <div>
                     <h3>Cool Insurance</h3>
                     <ul class="products-list">
-                        <li><a href="aboutus.html">About us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#FAQs">FAQs</a></li>
+                        <li><a href="../index.html#FAQs">FAQs</a></li>
+                        <li><a href="../index.html#map-wrapper">Contact</a></li>
+                        <li><a href="../index.html#about">About us</a></li>
+ 
+
                     </ul>
                 </div>
 
