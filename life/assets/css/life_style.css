@@ -74,7 +74,6 @@ input[type=text], input[type=date],input[type=email],input[type=tel],  .amount-s
     border: none;
     background-color: transparent;
     width: 2.5em;
-    margin-right: -15px;
 }
 
 #cover-term:focus,
@@ -162,3 +161,5 @@ input[type=checkbox]:focus {
 .reqd-asterisk {
     color: var(--green);
 }
+
+@media ()
