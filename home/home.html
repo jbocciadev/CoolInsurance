@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" href="style/style.css" />
         <script src="https://kit.fontawesome.com/7c24784c1c.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" type="image/x-icon">
         <title>Cool insurance</title>
     </head>
     <body>
@@ -20,8 +21,8 @@
     <!-- Bootstrap-native responsive Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img id="cool_logo" src="../assets/images/Cool_logo1.png"
-                    alt="Cool logo" height="100" /></a>
+            <a class="navbar-brand" href="../index.html"><img id="cool_logo" src="../assets/images/Cool_logo.png" alt="Cool logo"
+                    height="100" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -29,16 +30,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <hr>
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link activated" href="../home/home.html"><i class="fa-solid fa-house"></i>Home</a>
-                    </li>
+                <!--  -->
+                <ul class="navbar-nav ms-auto align-items-center d-none d-sm-flex">
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="../life/life.html"><i class="fa-solid fa-person"></i>Life</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../car/car.html"><i class="fa-solid fa-car"></i>Car</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link activated" href="#"><i class="fa-solid fa-house"></i>Home</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto align-items-center d-sm-none">
+                    <div>                        
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="../life/life.html">Life</a><i class="fa-solid fa-person text-center"></i>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="../car/car.html">Car</a><i class="fa-solid fa-car text-center"></i>
+                        </li>
+                        <li class="nav-item d-flex justify-content-between">
+                            <a class="nav-link" href="#">Home</a><i class="fa-solid fa-house text-center"></i>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -294,7 +311,7 @@
                 </div>
 
                 <div>
-                    <div><a href="#"><img class="footer-logo" src="../assets/images/Cool_logo.png" alt=""/></a>
+                    <div><a href="../index.html"><img class="footer-logo" src="../assets/images/Cool_logo.png" alt=""/></a>
                     </div>
                     <div class="footer-socials">
                         <div><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
