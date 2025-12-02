@@ -198,12 +198,14 @@ h1 {
 /* End FAQs ------------------------ */
 
 
-/* Contact Us section------------ */
+/* Contact Us section 
+    Juan A. Boccia 
+    Student ID: 23435330------------ */
 
 
 #map {
     width: 100%;
-    aspect-ratio: 4 / 4;
+    aspect-ratio: 3 / 1;
     margin: 0;
     object-fit: cover;
 }
@@ -222,12 +224,22 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 100%;
+}
+form div {
+    width: 90%;
 }
 
-/* #submit-btn-wrapper {
-    justify-self: center !important;
-} */
+#submit-btn {
+    border: none;
+    box-shadow: 0 0 10px var(--black);
+    min-width: 20%;
+    aspect-ratio: 4 / 1;
+}
+#submit-btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
 
 /* This is the about us page css for our cool insurance site 
  Joanne Brennan Elliott JBE */
@@ -301,6 +313,11 @@ h1 {
     .accordion:after {
         float: inline-end;
         margin-right: 9px;
+    }
+
+    #map {
+            aspect-ratio: 1 / 1;
+
     }
 
 }
