@@ -32,3 +32,20 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+		event.preventDefault();
+      let contactForm = document.getElementById("contact-form");
+      let successMessage = document.getElementById("successMessage");
+
+      contactForm.classList.add("d-none");
+      successMessage.classList.remove("d-none");
+      successMessage.classList.add("d-block");
+
+
+
+	});
+
+
+
+

@@ -337,8 +337,8 @@
                 </div>
                 <div class="row d-flex flex-column flex-sm-row">
                     
-                    <!-- Contact form for mobile -->
-                    <div class="w-100 d-flex flex-column align-items-center justify-content-between">
+                    <!-- Contact form -->
+                    <div class="d-flex flex-column align-items-center justify-content-between">
                             <form action="" id="contact-form" class="d-flex flex-column justify-content-around">
                                 <div class="row mb-2 mx-auto">   
                                     <label for="name">Name *</label>
@@ -346,19 +346,20 @@
                                 </div>
                                 <div class="row mb-2 mx-auto">        
                                     <label for="email">Email *</label>
-
                                     <input type="email" id="email" class="contact-input" placeholder="Your email"
                                         required>
                                 </div>
                                 <div class="row mb-2 mx-auto">    
-                                    <label for="email">Your message to us *</label>
-
+                                    <label for="message">Your message to us *</label>
                                     <textarea name="message" id="message" class="contact-input" wrap="hard" rows="8"
                                         placeholder="Your message..." required></textarea>
                                 </div>
                                 <input type="submit" name="submit-btn" id="submit-btn" class="align-self-center">
                                 
                             </form>
+                            <div class="d-none my-2" id="successMessage">
+                                <p class="text-center h3 ">Thank you for your message. Someone will soon contact you at the email address provided.</p>
+                            </div>
                     </div>
                     <!-- Map -->
                     <div class="w-100 mt-4">
@@ -414,10 +415,6 @@
                 </ul>
                 <br>
                 <hr>
-
-
-
-
 
                 <h1 class="text-center">Customer Testimonials</h1><br>
                 <h2 class="text-center"> Don't Just Take Our Word For It!</h2>
@@ -515,7 +512,9 @@
             <p>For educational purposes only</p>
         </div>
     </footer>
+
 </body>
+
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="assets\js\script.js"></script>
