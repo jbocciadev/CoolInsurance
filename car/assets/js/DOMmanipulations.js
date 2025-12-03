@@ -77,7 +77,7 @@ $(document).ready(function () {
         $("#tcOverlay").fadeIn(750); // show the edit buttons
     });
 
-    // TERMS AND CONDITIONS CLOSE OVERLAY -- Source Stackoverflow
+    // TERMS AND CONDITIONS CLOSE OVERLAY -- Source https://www.geeksforgeeks.org/web-templates/design-a-cookies-message-popup-template-using-html-and-css/
     $("#closeOverlay").click(function () {
         $("#tcOverlay").fadeOut(750);
     });

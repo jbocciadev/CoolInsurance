@@ -142,7 +142,7 @@ function calculatePremium() {
     else if (pen === 4) penaltyMultiplier = 10;
     else penaltyMultiplier = 15;
 
-    // Calculate the base premium
+    // Calculate the penalty point multiplier
     total += total * penaltyMultiplier
 
 
@@ -192,46 +192,46 @@ document.querySelectorAll("input, select").forEach(el => {
 });
 
 
-// // EMAILJS INTEGRATION -------------------------------------- Source: https://www.youtube.com/watch?v=ziYrGFADE1g&t=438s
-// emailjs.init("X0VrOze2ucHH5azPw");
+// EMAILJS INTEGRATION -------------------------------------- Source: https://www.youtube.com/watch?v=ziYrGFADE1g&t=438s
+emailjs.init("X0VrOze2ucHH5azPw");
 
-// document.getElementById("quotationForm").addEventListener("submit", function (event) {
-//     event.preventDefault(); // Prevent page reload
+document.getElementById("quotationForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page reload
 
-//     // return values from running/live total calculation
-//     const { total, monthlyTotal } = calculatePremium();
+    // return values from running/live total calculation
+    const { total, monthlyTotal } = calculatePremium();
 
-//     // pulled from the form
-//     const name = document.getElementById("fullname").value;
-//     const inputEmail = document.getElementById("inputEmail").value;
-//     const reg = document.getElementById("inputReg").value;
+    // pulled from the form
+    const name = document.getElementById("fullname").value;
+    const inputEmail = document.getElementById("inputEmail").value;
+    const reg = document.getElementById("inputReg").value;
 
-//     // emailJS car template and service id
-//     const serviceID = "service_t7m9ufn";
-//     const templateID = "template_79rrvnt";
+    // emailJS car template and service id
+    const serviceID = "service_t7m9ufn";
+    const templateID = "template_79rrvnt";
     
-//     //has to match the parameters in the service template
-//     const quotationForm = {
-//         name: name,
-//         input_Email: inputEmail,
-//         reg: reg,
-//         annual_total: total.toFixed(2),
-//         monthly_total: monthlyTotal.toFixed(2)
-//     };
+    //has to match the parameters in the service template
+    const quotationForm = {
+        name: name,
+        input_Email: inputEmail,
+        reg: reg,
+        annual_total: total.toFixed(2),
+        monthly_total: monthlyTotal.toFixed(2)
+    };
 
-//     // console.table(quotationForm);
-//     // console.log("Annual total:", total.toFixed(2));
-//     // console.log("Monthly total:", monthlyTotal.toFixed(2));
+    // console.table(quotationForm);
+    // console.log("Annual total:", total.toFixed(2));
+    // console.log("Monthly total:", monthlyTotal.toFixed(2));
 
-//     // forward details onto the service with conditionals for info
-//     emailjs.send(serviceID, templateID, quotationForm)
-//         .then(() => {
-//             alert("Your quotation was emailed to: " + inputEmail);
-//             document.getElementById("emailQuote").textContent =
-//                 "Quotation has been successfully sent to your email!"; // prevent user from sending same email again, transform button
-//         })
-//         .catch((error) => {
-//             console.error("Error sending quotation:", error);
-//             alert("Error sending email");
-//         });
-// });
+    // forward details onto the service with conditionals for info
+    emailjs.send(serviceID, templateID, quotationForm)
+        .then(() => {
+            alert("Your quotation was emailed to: " + inputEmail);
+            document.getElementById("emailQuote").textContent =
+                "Quotation has been successfully sent to your email!"; // prevent user from sending same email again, transform button
+        })
+        .catch((error) => {
+            console.error("Error sending quotation:", error);
+            alert("Error sending email");
+        });
+});
