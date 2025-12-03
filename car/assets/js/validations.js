@@ -42,7 +42,7 @@ document.getElementById('inputPhone').addEventListener('input', function () {
     const phone = this.value.trim();
     const warning = document.getElementById('phoneWarning');
 
-    // Regex: exactly 10 digits
+    // Phone validation, submit button. Regex: exactly 10 digits
     if (!/^\d{10}$/.test(phone)) {
         warning.textContent = "Phone number must be exactly 10 digits.";
         warning.style.display = "inline";
@@ -76,7 +76,7 @@ document.getElementById('quotationForm').addEventListener('submit', function (e)
         regWarning.scrollIntoView({ behavior: 'smooth', block: 'center' });
         valid = false;
     }
-    // Phone check
+    // Phone check, real time validation for span
     const phone = document.getElementById('inputPhone').value.trim();
     const phoneWarning = document.getElementById('phoneWarning');
     if (!/^\d{10}$/.test(phone)) {
