@@ -1,28 +1,35 @@
-<!-- This is the home insurance page of our company's site 
- Joanne Brennan Elliott JBE-->
- 
+<!-- Student Name: Joanne Brennan Elliott 
+ Student Number: X23410001
+ This is the home insurance page of our company's site 
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../base.css">
-     <!--  <link rel="stylesheet" href="/assets/css/style.css" /> -->
 
-        <link rel="stylesheet" href="style/style.css" />
-        <script src="https://kit.fontawesome.com/7c24784c1c.js" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" type="image/x-icon">
-        <title>Cool insurance</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../base.css">
+    <!--  <link rel="stylesheet" href="/assets/css/style.css" /> -->
+
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://kit.fontawesome.com/7c24784c1c.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assets/images/favicon/favicon.ico" type="image/x-icon">
+    <title>Cool insurance</title>
+</head>
+
+<body>
 
     <!-- Bootstrap-native responsive Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img id="cool_logo" src="../assets/images/Cool_logo.png" alt="Cool logo"
-                    height="100" /></a>
+            <a class="navbar-brand" href="../index.html"><img id="cool_logo" src="../assets/images/Cool_logo.png"
+                    alt="Cool logo" height="100" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -32,7 +39,7 @@
                 <hr>
                 <!--  -->
                 <ul class="navbar-nav ms-auto align-items-center d-none d-sm-flex">
-                    
+
                     <li class="nav-item">
                         <a class="nav-link" href="../life/life.html"><i class="fa-solid fa-person"></i>Life</a>
                     </li>
@@ -45,12 +52,14 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto align-items-center d-sm-none">
-                    <div>                        
+                    <div>
                         <li class="nav-item d-flex justify-content-between">
-                            <a class="nav-link" href="../life/life.html">Life</a><i class="fa-solid fa-person text-center"></i>
+                            <a class="nav-link" href="../life/life.html">Life</a><i
+                                class="fa-solid fa-person text-center"></i>
                         </li>
                         <li class="nav-item d-flex justify-content-between">
-                            <a class="nav-link" href="../car/car.html">Car</a><i class="fa-solid fa-car text-center"></i>
+                            <a class="nav-link" href="../car/car.html">Car</a><i
+                                class="fa-solid fa-car text-center"></i>
                         </li>
                         <li class="nav-item d-flex justify-content-between">
                             <a class="nav-link" href="#">Home</a><i class="fa-solid fa-house text-center"></i>
@@ -63,285 +72,305 @@
 
     <!-- End of Navbar -->
 
-      <!--  <div class="container">
+    <!--  <div class="container">
             <h2>Home Insurance Quotation Form</h2>
            
             <hr>
         </div> -->
 
-        <!--  <form action="/action_page.php"> -->
-        <form id="homeForm">       
-            <div class="form-container w-100"> <!-- Full width container for the form -->
-                <div class="houseIns-form" id="TermsInfo">
+    <!--  <form action="/action_page.php"> -->
+    <form id="homeForm">
+        <div class="form-container w-100"> <!-- Full width container for the form -->
+            <div class="houseIns-form" id="TermsInfo">
                 <h1>Welcome to your Home Insurance quotation form</h1>
-                    <p>Fill in the form below to get your Home Insurance Quote.</p>
-                    <ul>
-                        <li>Contents insurance <br>
-                            If you require a contents only insurance policy, this protects your belongings only from damage or theft whether you rent or own your home.
-                            Please contact us on the number below</li>
+                <p>Fill in the form below to get your Home Insurance Quote.</p>
 
-                        <li>Buildings insurance <br>
-                            If you require a buildings only insurance policy, which only covers the structure of your home, garages and outbuildings including permanent units such as kitchen units and bathroom fittings.
-                            Please contact us on the number below 
-                        </li>
-                        <li>For any of the additional cover please fill this information in the Additional Information comments box at the end of the form or contact us at the number below.
-                        </li>
-                        ️<li>Important Notes:</li>
-                        <li>Please ensure all information provided is accurate to the best of your knowledge.</li>
+                <h4>Contents insurance </h4>
+                <ul>
+                    <li>If you require a contents only insurance policy, this protects your belongings only from damage
+                        or theft whether you rent or own your home.
+                        Please contact us on the number below</li>
+                </ul>
+                <h4>Buildings insurance </h4>
+                <ul>
+                    <li>If you require a buildings only insurance policy, which only covers the structure of your home,
+                        garages and outbuildings including permanent units such as kitchen units and bathroom fittings.
+                        Please contsact us on the number below
+                    </li>
+                    <li>For any of the additional cover please fill this information in the Additional Information
+                        comments box at the end of the form or contact us at the number below.
+                    </li>
+                </ul>
+                <h4>Important Notes</h4>
+                <ul>
+                    <li>Please ensure all information provided is accurate to the best of your knowledge.</li>
 
-                        <li>If you have any questions please feel free to contact us on the number below or drop us an email or read through the FAQs</li>
-                  </ul>
-                        
-                </div>
+                    <li>If you have any questions please feel free to contact us on the number below or drop us an email
+                        or read through the FAQs</li>
+                </ul>
 
-                <div class="houseIns-form" id="PersonalInfo">
-              
-                    <h1>Personal Information</h1>
-                     <div class="row"> <!-- first name and last name row -->
-                        <div class="col-sm-6"> 
+
+            </div>
+
+            <div class="houseIns-form" id="PersonalInfo">
+
+                <h1>Personal Information</h1>
+                <div class="row"> <!-- first name and last name row -->
+                    <div class="col-sm-6">
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="fname" placeholder="Your first name" required>
-                        </div>
-
-                        <div class="col-sm-6"> 
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" placeholder="Your last name" required>
-                        </div>
-                    </div>
-                    
-                    <div class="row"> <!-- phone number and cover start date row -->
-                        <div class="col-sm-6">
-                             <label for="phoneNumber">Phone Number</label> <!-- TO DO   - Validate phone number  -->
-                             <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phone number" pattern="[0-9]{10}" required >  
-                        </div>  
-
-                        <div class="col-sm-6"> 
-                        <!-- date you require the home insurance from? -->
-                            <label for="startDate">Cover Start Date</label>
-                            <input type="date" id="startDate" name="startDate" required>
-                        </div>
                     </div>
 
-                    <!-- Address of Property to be insured  -->
-                    <div class="col-lg-12 show">	<!-- Full width column -->
-                        <label for="eircode">Address or Eircode of Property to be insured</label> 
-                         <!--TO DO validate eircode format here-->            
-                        <input type="text" id="ecode" name="eircode" placeholder="Your Eircode or Address" required>
+                    <div class="col-sm-6">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name" required>
                     </div>
-
-                    <div class="col-lg-12 show">	<!-- Full width column -->
-                    <label for="email  ">Please supply your Email Address for your Quote</label>
-                   <!--  <input type="email" id="email" name="email" placeholder="email"> -->
-                     <input type="email" id="email" name="email" placeholder="email" required>
-                     
                 </div>
 
-                </div>      <!-- End of Personal Info section -->
+                <div class="row"> <!-- phone number and cover start date row -->
+                    <div class="col-sm-6">
+                        <label for="phoneNumber">Phone Number</label> <!-- TO DO   - Validate phone number  -->
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phone number"
+                            pattern="[0-9]{10}" required>
+                    </div>
 
-                <div class="houseIns-form" id="HouseInfo">
-                    <h1>House Information</h1>  
-                    <!-- House Information Section -->
-                     <div class="row"> <!-- house type and year your home built  -->
+                    <div class="col-sm-6">
+                        <!-- date you require the home insurance from? -->
+                        <label for="startDate">Cover Start Date</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                </div>
 
-                      <div class="col-sm-6"> 
+                <!-- Address of Property to be insured  -->
+                <div class="col-lg-12 show"> <!-- Full width column -->
+                    <label for="eircode">Address or Eircode of Property to be insured</label>
+                    <!--TO DO validate eircode format here-->
+                    <input type="text" id="ecode" name="eircode" placeholder="Your Eircode or Address" required>
+                </div>
+
+                <div class="col-lg-12 show"> <!-- Full width column -->
+                    <label for="email  ">Please supply your Email Address for your Quote</label>
+                    <!--  <input type="email" id="email" name="email" placeholder="email"> -->
+                    <input type="email" id="email" name="email" placeholder="email" required>
+
+                </div>
+
+            </div> <!-- End of Personal Info section -->
+
+            <div class="houseIns-form" id="HouseInfo">
+                <h1>House Information</h1>
+                <!-- House Information Section -->
+                <div class="row"> <!-- house type and year your home built  -->
+
+                    <div class="col-sm-6">
                         <label for="houseType">House Type</label>
                         <select class="form-select" id="houseType" name="houseType">
                             <option value="ownerOccupiedCover" selected>Owner Occupied Cover</option>
                             <option value="landlordOrTenentCover">Landlord Or Tenant Cover</option>
                             <option value="holidayHomeCover">Holiday Home Cover</option>
                         </select>
-                        </div>  
-                            
-                        <div class="col-sm-6"> 
-                            <!-- when was your home built?  --> 
-                            <label for="buildYear">Build Year</label>
-                            <input type="number" id="buildYear" name="buildYear" placeholder="e.g., 1990" required>
-                        </div>   
-                    </div>  
+                    </div>
 
-                    <div class="row">  <!-- bedrooms and bathrooms  -->
-                         <div class="col-sm-6"> 
-                            <!--  how many Bedrooms?  --> 
-                            <!-- validate number Bedrooms format here-->  
-                            <label for="numOfBedrooms">How many bedrooms?</label> 
-                            <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3" min="1" required>
-                        </div>
+                    <div class="col-sm-6">
+                        <!-- when was your home built?  -->
+                        <label for="buildYear">Build Year</label>
+                        <input type="number" id="buildYear" name="buildYear" placeholder="e.g., 1990" required>
+                    </div>
+                </div>
 
-                         <div class="col-sm-6"> 
-                        <!--  how many bathrooms?  --> 
+                <div class="row"> <!-- bedrooms and bathrooms  -->
+                    <div class="col-sm-6">
+                        <!--  how many Bedrooms?  -->
+                        <!-- validate number Bedrooms format here-->
+                        <label for="numOfBedrooms">How many bedrooms?</label>
+                        <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3" min="1" required>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <!--  how many bathrooms?  -->
                         <label for="numOfBathrooms">How many bathrooms?</label>
                         <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g., 2" min="1" required>
-                        </div>
+                    </div>
+                </div>
+
+                <div class="row"> <!-- rebuild cost and contents value  -->
+                    <div class="col-sm-6">
+                        <!-- cost to rebuild your home (€):  -->
+                        <label for="rebuildCost">Rebuild Cost (€)</label>
+                        <input type="number" id="rebuildCost" name="rebuildCost" placeholder="e.g., 200000" required>
                     </div>
 
-                    <div class="row"> <!-- rebuild cost and contents value  -->
-                         <div class="col-sm-6"> 
-                            <!-- cost to rebuild your home (€):  --> 
-                            <label for="rebuildCost">Rebuild Cost (€)</label>
-                            <input type="number" id="rebuildCost" name="rebuildCost" placeholder="e.g., 200000" required>
-                        </div>
-
-                         <div class="col-sm-6"> 
-                            <!-- cost of contents to be insured (€):  --> 
-                            <label for="contentsValue">Contents Value (€)</label>  
-                            <input type="number" id="contentsValue" name="contentsValue" placeholder="e.g., 50000" required>
-                        </div>
+                    <div class="col-sm-6">
+                        <!-- cost of contents to be insured (€):  -->
+                        <label for="contentsValue">Contents Value (€)</label>
+                        <input type="number" id="contentsValue" name="contentsValue" placeholder="e.g., 50000" required>
                     </div>
-                        
-                    <div class="row"> <!-- security systems and heating type  -->
-                        <!--  security systems installed?  -->
-                         <div class="col-sm-6">
-                            <!-- do you have any security systems installed?  --> 
-                            <label for="securitySystems">Security Systems</label>  
-                            <select class="form-select" id="securitySystems" name="securitySystems">
-                                <option value="yes" selected>Yes</option>
-                                <option value="no">No</option>
-                            </select>
-                        </div>
+                </div>
 
-                         <div class="col-sm-6">
-                            <!-- how do you heat your home?  --> 
-                            <label for="heatingType">Heating Type</label>
-                            <select class="form-select" id="heatingType" name="heatingType">
-                                <option value="centralHeating" selected>Central Heating</option>
-                                <option value="electricHeating">Electric Heating</option>
-                                <option value="gasHeating">Gas Heating</option>
-                                <option value="otherHeating">Other</option> 
-                            </select>
-                        </div>
+                <div class="row"> <!-- security systems and heating type  -->
+                    <!--  security systems installed?  -->
+                    <div class="col-sm-6">
+                        <!-- do you have any security systems installed?  -->
+                        <label for="securitySystems">Security Systems</label>
+                        <select class="form-select" id="securitySystems" name="securitySystems">
+                            <option value="yes" selected>Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
 
-                    <div class="row">  <!-- number of floors and no claims years  -->
-                          <!--how many floors does your home have? -->
-                        <div class="col-sm-6">
-                            <label for="numOfFloors">Number of Floors</label>
-                            <input type="number" id="numOfFloors" name="numOfFloors" placeholder="e.g., 2"  min="1">
-                        </div>
-                        <!--how many years no claims on home insurance? -->
-                        <div class="col-sm-6">
-                            <label for="noClaimsYears">Number of Claim Free Years</label>
-                            <input type="number" id="noClaimsYears" name="noClaimsYears" placeholder="e.g., 5" value="0">
-                        </div> 
+                    <div class="col-sm-6">
+                        <!-- how do you heat your home?  -->
+                        <label for="heatingType">Heating Type</label>
+                        <select class="form-select" id="heatingType" name="heatingType">
+                            <option value="centralHeating" selected>Central Heating</option>
+                            <option value="electricHeating">Electric Heating</option>
+                            <option value="gasHeating">Gas Heating</option>
+                            <option value="otherHeating">Other</option>
+                        </select>
                     </div>
-                </div> <!-- End of House Info section -->
-                
-                <div class="houseIns-form" id="ExtraInfo">
-                    <h1>Extra Information</h1>  
-                    <!-- Additional Information Section -->
-                    <div class="row"> <!--  message  -->
-            
-                        <div class="col-lg-12 show">	    <!-- Full width column -->
-                            <h4>Additional Information</h4>
-                            <p>Please provide any additional information that may help us in providing you with an accurate quote.</p>
-                           
-                           <li>Additional Cover Options: </li> 
+                </div>
 
-                            <li>Accidental damage cover</li>
-                            <li>  Add accidental damage as an optional extra to your home insurance policy. This covers accidental damage to your building and/or contents.
-                            </li>
-                            <li>Cover for Portable items </li>
-                            <li> Cover for portable items such as laptops, mobile phones, tablets and jewellery outside of the home.</li>
-                            <li>Legal Expenses Cover </li>  
-                            <li> Cover to help with legal costs arising from certain disputes, such as property or neighbour disputes.</li>
-                            <li>Alternative Accommodation Cover </li>
-                            <li> Cover to pay for alternative accommodation if your home becomes uninhabitable following an insured event.</li>
-                            <li>Family Legal Protection </li>   
-                            <li> Cover to help with legal costs arising from certain personal legal disputes, such as employment or personal injury disputes.</li>
-                            <li>Home Emergency Cover </li>
-                            <li> Cover to arrange and pay for emergency repairs to your home following an insured event, such as a burst pipe or a broken window.</li>
-                            <li>Golf Equipment Cover </li>
-                            <li> Cover for your golf equipment, including when it is outside of the home.</li>
-                            <li>Bike Cover </li>
-                            <li> Cover for your bicycles, including when they are outside of the home.</li>
-                            <li>Personal Accident Cover </li>
-                            <li> Cover to pay a lump sum if you suffer a serious injury following an accident.</li>
-                            <li>Emergency Home Assistance Cover </li>
-                            <li> Cover to arrange and pay for emergency repairs to your home following an insured event, such as a burst pipe or a broken window.</li>
-                            <li>Domestic Help Cover </li>
-                            <li> Cover to pay for domestic help if you are unable to carry out your normal domestic duties following an accident or illness.</li>
-                            <li>Garden Cover </li>
-                            <li> Cover for damage to your garden, including plants, trees and shrubs.</li>
-                            <li>Personal Belongings Cover </li> 
-                            <li> Cover for personal belongings such as clothing, jewellery and sports equipment outside of the home.</li>
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Write something.."></textarea>
-                        </div>
+                <div class="row"> <!-- number of floors and no claims years  -->
+                    <!--how many floors does your home have? -->
+                    <div class="col-sm-6">
+                        <label for="numOfFloors">Number of Floors</label>
+                        <input type="number" id="numOfFloors" name="numOfFloors" placeholder="e.g., 2" min="1">
                     </div>
+                    <!--how many years no claims on home insurance? -->
+                    <div class="col-sm-6">
+                        <label for="noClaimsYears">Number of Claim Free Years</label>
+                        <input type="number" id="noClaimsYears" name="noClaimsYears" placeholder="e.g., 5" value="0">
+                    </div>
+                </div>
+            </div> <!-- End of House Info section -->
 
-                    <!-- terms and conditions checkbox  -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck"> Agree to Terms & Conditions</label>
+            <div class="houseIns-form" id="ExtraInfo">
+                <h1>Extra Information</h1>
+                <!-- Additional Information Section -->
+                <div class="row"> <!--  message  -->
+
+                    <div class="col-lg-12 show"> <!-- Full width column -->
+                        <h4>Additional Information</h4>
+                        <p>Please provide any additional information that may help us in providing you with an accurate
+                            quote.</p>
+
+                        <li>Additional Cover Options: </li>
+
+                        <li>Accidental damage cover</li>
+                        <li> Add accidental damage as an optional extra to your home insurance policy. This covers
+                            accidental damage to your building and/or contents.
+                        </li>
+                        <li>Cover for Portable items </li>
+                        <li> Cover for portable items such as laptops, mobile phones, tablets and jewellery outside of
+                            the home.</li>
+                        <li>Legal Expenses Cover </li>
+                        <li> Cover to help with legal costs arising from certain disputes, such as property or neighbour
+                            disputes.</li>
+                        <li>Alternative Accommodation Cover </li>
+                        <li> Cover to pay for alternative accommodation if your home becomes uninhabitable following an
+                            insured event.</li>
+                        <li>Family Legal Protection </li>
+                        <li> Cover to help with legal costs arising from certain personal legal disputes, such as
+                            employment or personal injury disputes.</li>
+                        <li>Home Emergency Cover </li>
+                        <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
+                            such as a burst pipe or a broken window.</li>
+                        <li>Golf Equipment Cover </li>
+                        <li> Cover for your golf equipment, including when it is outside of the home.</li>
+                        <li>Bike Cover </li>
+                        <li> Cover for your bicycles, including when they are outside of the home.</li>
+                        <li>Personal Accident Cover </li>
+                        <li> Cover to pay a lump sum if you suffer a serious injury following an accident.</li>
+                        <li>Emergency Home Assistance Cover </li>
+                        <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
+                            such as a burst pipe or a broken window.</li>
+                        <li>Domestic Help Cover </li>
+                        <li> Cover to pay for domestic help if you are unable to carry out your normal domestic duties
+                            following an accident or illness.</li>
+                        <li>Garden Cover </li>
+                        <li> Cover for damage to your garden, including plants, trees and shrubs.</li>
+                        <li>Personal Belongings Cover </li>
+                        <li> Cover for personal belongings such as clothing, jewellery and sports equipment outside of
+                            the home.</li>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write something.."></textarea>
                     </div>
+                </div>
+
+                <!-- terms and conditions checkbox  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck"> Agree to Terms & Conditions</label>
+                </div>
 
                 <div class="submit-form" id="SubmitInfo">
                     <button id="MySubmit" type="submit" onclick="mySubmit()"> Submit Details</button>
                 </div>
- 
-                </div> <!-- End of Extra Info section -->
 
-                <!--<div class="container">         
+            </div> <!-- End of Extra Info section -->
+
+            <!--<div class="container">         
                              <button type="submit" class="btn btn-success btn-lg">Submit Details</button>
 
-                </div> --> 
-                <br><br>
+                </div> -->
+            <br><br>
+        </div>
+    </form>
+
+
+    <footer>
+        <div class="footer-links-container">
+            <div>
+                <h3>Our Products</h3>
+                <ul class="products-list">
+                    <li><a href="../life/life.html">Life Insurance</a></li>
+                    <li><a href="../car/car.html">Car Insurance</a></li>
+                    <li><a href="#">Home Insurance</a></li>
+                </ul>
             </div>
-        </form>
+            <div>
+                <h3>Cool Insurance</h3>
+                <ul class="products-list">
+                    <li><a href="../index.html#FAQs">FAQs</a></li>
+                    <li><a href="../index.html#map-wrapper">Contact</a></li>
+                    <li><a href="../index.html#about">About us</a></li>
 
 
-            <footer>
-            <div class="footer-links-container">
-                <div>
-                    <h3>Our Products</h3>
-                    <ul class="products-list">
-                        <li><a href="../life/life.html">Life Insurance</a></li>
-                        <li><a href="../car/car.html">Car Insurance</a></li>
-                        <li><a href="#">Home Insurance</a></li>
-                    </ul>
+                </ul>
+            </div>
+
+            <div>
+                <div><a href="../index.html"><img class="footer-logo" src="../assets/images/Cool_logo.png" alt="" /></a>
                 </div>
-                <div>
-                    <h3>Cool Insurance</h3>
-                    <ul class="products-list">
-                        <li><a href="../index.html#FAQs">FAQs</a></li>
-                        <li><a href="../index.html#map-wrapper">Contact</a></li>
-                        <li><a href="../index.html#about">About us</a></li>
- 
-
-                    </ul>
-                </div>
-
-                <div>
-                    <div><a href="../index.html"><img class="footer-logo" src="../assets/images/Cool_logo.png" alt=""/></a>
+                <div class="footer-socials">
+                    <div><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </div>
-                    <div class="footer-socials">
-                        <div><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        </div>
-                        <div><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        </div>
-                        <div><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                        <div><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
+                    <div><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-
-
+                    <div><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
+
+
             </div>
+        </div>
 
-            <hr>
+        <hr>
 
-            <div class="footer-bottom">
-                <p>Mayor Street Lower, International Financial Services Centre, Dublin 1</p>
-                <p>For educational purposes only</p>
-            </div>
+        <div class="footer-bottom">
+            <p>Mayor Street Lower, International Financial Services Centre, Dublin 1</p>
+            <p>For educational purposes only</p>
+        </div>
 
 
-            </footer>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
     <!-- EmailJS CDN script -->
-        <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    </body>
+</body>
+
 </html>
