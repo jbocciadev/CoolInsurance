@@ -1,9 +1,8 @@
-/* This is the main css file. It will provide the layout styling to the landing page as well as to the rest of pages.
+    /* This is the main css file. It will provide the layout styling to the landing page as well as to the rest of pages.
     Variables are declared in this file.
     This file is also intended to provide styling to header and footer elements that will repeat across pages.
     Every other page to have their specific css to deal with elements that are not shared with the rest of pages */
 
-/* @import url("https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap"); */
 
 @font-face {
     font-family: "Zalando";
@@ -84,7 +83,6 @@ body {
 }
 
 footer {
-    /* height: 20vh; */
     background-color: var(--white);
 }
 
@@ -96,6 +94,7 @@ footer {
 
 footer h3 {
     text-align: center;
+    font-weight: 600;
 }
 
 footer ul {

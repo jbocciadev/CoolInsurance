@@ -231,6 +231,7 @@ form div {
 
 #submit-btn {
     border: none;
+    border-radius: 10px;
     box-shadow: 0 0 10px var(--black);
     min-width: 20%;
     aspect-ratio: 4 / 1;
@@ -240,6 +241,7 @@ form div {
     color: var(--white);
 }
 
+/* END CONTACT US ------------------------------------- */
 
 /* This is the about us page css for our cool insurance site 
  Joanne Brennan Elliott JBE */
