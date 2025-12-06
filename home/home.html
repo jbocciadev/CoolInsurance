@@ -28,8 +28,8 @@
     <!-- Bootstrap-native responsive Navigation bar -->
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="../index.html"><img id="cool_logo" src="../assets/images/Cool_logo.webp"
-                    alt="Cool logo" height="100" /></a>
+            <a class="navbar-brand" href="../index.html" aria-label="this page"><img id="cool_logo" src="../assets/images/Cool_logo.webp" alt="Cool insurance logo"
+                    height="100" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -37,34 +37,29 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <hr>
-                <!--  -->
                 <ul class="navbar-nav ms-auto align-items-center d-none d-sm-flex">
-
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="../life/life.html"><i class="fa-solid fa-person"></i>Life</a>
+                        <a class="nav-link" href="../life.html" aria-label="life insurance"><i class="fa-solid fa-person"></i>Life</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../car/car.html"><i class="fa-solid fa-car"></i>Car</a>
+                        <a class="nav-link" href="../car/car.html" aria-label="car insurance"><i class="fa-solid fa-car"></i>Car</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link activated" href="#"><i class="fa-solid fa-house"></i>Home</a>
+                        <a class="nav-link" href="../home.html" aria-label="home insurance"><i class="fa-solid fa-house"></i>Home</a>
                     </li>
                 </ul>
-
+                <!-- Navbar list for smaller screens -->
                 <ul class="navbar-nav ms-auto align-items-center d-sm-none">
-                    <div>
                         <li class="nav-item d-flex justify-content-between">
-                            <a class="nav-link" href="../life/life.html">Life</a><i
-                                class="fa-solid fa-person text-center"></i>
+                            <a class="nav-link" href="../life.html" aria-label="life insurance">Life <i class="fa-solid fa-person text-center"></i></a>
                         </li>
                         <li class="nav-item d-flex justify-content-between">
-                            <a class="nav-link" href="../car/car.html">Car</a><i
-                                class="fa-solid fa-car text-center"></i>
+                            <a class="nav-link" href="../car/car.html" aria-label="car insurance">Car <i class="fa-solid fa-car text-center"></i></a>
                         </li>
                         <li class="nav-item d-flex justify-content-between">
-                            <a class="nav-link" href="#">Home</a><i class="fa-solid fa-house text-center"></i>
+                            <a class="nav-link" href="../home.html" aria-label="home insurance">Home <i class="fa-solid fa-house text-center"></i></a>
                         </li>
-                    </div>
                 </ul>
             </div>
         </div>
