@@ -356,16 +356,16 @@ li.nav-item {
 }
 @media (min-width: 1900px) {
     .hero-text-p, form textarea, form label, .aboutPoints, p, a, form output, select, li, button {
-        font-size: 22px !important;
+        font-size: 20px !important;
     }
     h3, h4, h5, h6 {
-        font-size: 28px !important;
+        font-size: 24px !important;
     }
     h2, i {
-        font-size: 40px !important;
+        font-size: 55px !important;
     }
     input[type=radio], input[type=checkbox] {
-        transform: scale(1.5);
+        transform: scale(1.4);
     }
     form input {
         margin-right: 20px;
