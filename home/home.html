@@ -140,11 +140,11 @@
                 <div class="col-lg-12 show"> <!-- Full width column -->
                     <label for="eircode">Address or Eircode of Property to be insured</label>
                     <!--TO DO validate eircode format here-->
-                    <input type="text" id="ecode" name="eircode" placeholder="Your Eircode or Address" required>
+                    <input type="text" id="eircode" name="eircode" placeholder="Your Eircode or Address" required>
                 </div>
 
                 <div class="col-lg-12 show"> <!-- Full width column -->
-                    <label for="email  ">Please supply your Email Address for your Quote</label>
+                    <label for="email">Please supply your Email Address for your Quote</label>
                     <!--  <input type="email" id="email" name="email" placeholder="email"> -->
                     <input type="email" id="email" name="email" placeholder="email" required>
 
@@ -177,13 +177,13 @@
                     <div class="col-sm-6">
                         <!--  how many Bedrooms?  -->
                         <!-- validate number Bedrooms format here-->
-                        <label for="numOfBedrooms">How many bedrooms?</label>
+                        <label for="bedrooms">How many bedrooms?</label>
                         <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g., 3" min="1" required>
                     </div>
 
                     <div class="col-sm-6">
                         <!--  how many bathrooms?  -->
-                        <label for="numOfBathrooms">How many bathrooms?</label>
+                        <label for="bathrooms">How many bathrooms?</label>
                         <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g., 2" min="1" required>
                     </div>
                 </div>
@@ -248,45 +248,48 @@
                         <h4>Additional Information</h4>
                         <p>Please provide any additional information that may help us in providing you with an accurate
                             quote.</p>
+                        <ul>
 
-                        <li>Additional Cover Options: </li>
+                            <li>Additional Cover Options: </li>
 
-                        <li>Accidental damage cover</li>
-                        <li> Add accidental damage as an optional extra to your home insurance policy. This covers
-                            accidental damage to your building and/or contents.
-                        </li>
-                        <li>Cover for Portable items </li>
-                        <li> Cover for portable items such as laptops, mobile phones, tablets and jewellery outside of
-                            the home.</li>
-                        <li>Legal Expenses Cover </li>
-                        <li> Cover to help with legal costs arising from certain disputes, such as property or neighbour
-                            disputes.</li>
-                        <li>Alternative Accommodation Cover </li>
-                        <li> Cover to pay for alternative accommodation if your home becomes uninhabitable following an
-                            insured event.</li>
-                        <li>Family Legal Protection </li>
-                        <li> Cover to help with legal costs arising from certain personal legal disputes, such as
-                            employment or personal injury disputes.</li>
-                        <li>Home Emergency Cover </li>
-                        <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
-                            such as a burst pipe or a broken window.</li>
-                        <li>Golf Equipment Cover </li>
-                        <li> Cover for your golf equipment, including when it is outside of the home.</li>
-                        <li>Bike Cover </li>
-                        <li> Cover for your bicycles, including when they are outside of the home.</li>
-                        <li>Personal Accident Cover </li>
-                        <li> Cover to pay a lump sum if you suffer a serious injury following an accident.</li>
-                        <li>Emergency Home Assistance Cover </li>
-                        <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
-                            such as a burst pipe or a broken window.</li>
-                        <li>Domestic Help Cover </li>
-                        <li> Cover to pay for domestic help if you are unable to carry out your normal domestic duties
-                            following an accident or illness.</li>
-                        <li>Garden Cover </li>
-                        <li> Cover for damage to your garden, including plants, trees and shrubs.</li>
-                        <li>Personal Belongings Cover </li>
-                        <li> Cover for personal belongings such as clothing, jewellery and sports equipment outside of
-                            the home.</li>
+                            <li>Accidental damage cover</li>
+                            <li> Add accidental damage as an optional extra to your home insurance policy. This covers
+                                accidental damage to your building and/or contents.
+                            </li>
+                            <li>Cover for Portable items </li>
+                            <li> Cover for portable items such as laptops, mobile phones, tablets and jewellery outside of
+                                the home.</li>
+                            <li>Legal Expenses Cover </li>
+                            <li> Cover to help with legal costs arising from certain disputes, such as property or neighbour
+                                disputes.</li>
+                            <li>Alternative Accommodation Cover </li>
+                            <li> Cover to pay for alternative accommodation if your home becomes uninhabitable following an
+                                insured event.</li>
+                            <li>Family Legal Protection </li>
+                            <li> Cover to help with legal costs arising from certain personal legal disputes, such as
+                                employment or personal injury disputes.</li>
+                            <li>Home Emergency Cover </li>
+                            <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
+                                such as a burst pipe or a broken window.</li>
+                            <li>Golf Equipment Cover </li>
+                            <li> Cover for your golf equipment, including when it is outside of the home.</li>
+                            <li>Bike Cover </li>
+                            <li> Cover for your bicycles, including when they are outside of the home.</li>
+                            <li>Personal Accident Cover </li>
+                            <li> Cover to pay a lump sum if you suffer a serious injury following an accident.</li>
+                            <li>Emergency Home Assistance Cover </li>
+                            <li> Cover to arrange and pay for emergency repairs to your home following an insured event,
+                                such as a burst pipe or a broken window.</li>
+                            <li>Domestic Help Cover </li>
+                            <li> Cover to pay for domestic help if you are unable to carry out your normal domestic duties
+                                following an accident or illness.</li>
+                            <li>Garden Cover </li>
+                            <li> Cover for damage to your garden, including plants, trees and shrubs.</li>
+                            <li>Personal Belongings Cover </li>
+                            <li> Cover for personal belongings such as clothing, jewellery and sports equipment outside of
+                                the home.</li>
+                        </ul>
+
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Write something.."></textarea>
                     </div>
@@ -364,7 +367,7 @@
 
     <script src="./assets/js/script.js"></script>
     <!-- EmailJS CDN script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
 </body>
 
